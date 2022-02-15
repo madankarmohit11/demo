@@ -1,0 +1,18 @@
+
+for check in *
+do 
+	fN=$(echo $check);
+
+	if [ -d uu ]
+	then
+	echo folder;
+	
+	else
+	
+	echo file doesnt exist ;
+	mkdir uu;
+	echo uu;
+	exit;
+	
+	fi
+done

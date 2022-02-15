@@ -1,0 +1,35 @@
+echo "enter a date";
+read -p "enter a day ": d;
+read -p "enter a month": m;
+read -p "enter a year": y;
+echo "you have enter date $d/$m/$y";
+
+a=$"((14-$m))";
+Y=$[(($y-$a))/12];
+echo $Y;
+
+x=$[$Y+($Y/4)-($Y/100)+($Y/400)];
+echo $b;
+
+M=$[$m+(12*($a/12))-2];
+echo $M;
+
+D=$[(($d+$x+(31*$M/12))%7)];
+echo $D
+
+case $D in
+1)
+	echo "its monday";;
+2)
+        echo "its tuesday";;
+3)
+        echo "its wensday";;
+4)
+        echo "its thurday";;
+5)
+        echo "its friday";;
+6)
+        echo "its saturday";;
+0)
+        echo "yeppi its sunday";;
+esac

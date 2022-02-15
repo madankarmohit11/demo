@@ -1,0 +1,6 @@
+af=0.8
+echo 1 inch=0.8
+echo 42 inch =?
+ft=42
+ftr= echo $ft $af | awk '{print $1*$2}'
+echo $ftr

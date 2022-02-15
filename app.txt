@@ -1,0 +1,14 @@
+for append in *.log.1
+do 
+	
+	fn=$(echo $append | awk -F. '{print $1}');
+	echo $append;
+	echo $fn;
+	dat=$(date +%d%m%Y);
+	echo $dat;
+	final=$(echo $fn$dat);
+	echo $final;
+	mv $append $final;
+	filename=$(echo $append | awk -F. '{print $1}');	
+	echo $filename;
+done	

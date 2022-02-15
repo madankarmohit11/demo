@@ -1,0 +1,32 @@
+declare -a fruits=("banana" "apple" "orange")
+echo ${fruits[@]}
+
+echo ${fruits[2]}
+echo ${fruits[@]:1:${#fruits[@]}-1}
+
+echo ${fruits[@]:1:2}
+
+l=${#fruits[@]}
+echo $l
+
+for((i=0; i<$l; i++))
+do
+echo ${fruits[$i]}
+echo $i
+done
+
+for i in ${fruits[@]}
+do
+echo $i
+done
+fruits[5]="chikku"
+echo ${fruits[@]}
+
+unset fruits[1]
+echo ${fruits[@]}
+
+#unset fruits[@]
+
+#echo ${fruits[@]}
+
+echo ${fruits[0]:0:2}

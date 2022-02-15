@@ -1,0 +1,35 @@
+dat=$(cat data.csv | awk '{print $4}');
+echo $dat;
+ten=100000;
+echo $ten;
+if [ '$dat -gt $ten' ]
+then
+ empay=$(cat data.csv | awk '{print $2 "\n "$7}');
+  echo $empay;
+fi
+ 
+agg=$(cat data.csv | grep CAPTAIN | awk '{ sum+=$7 } END {print sum/NR}');
+  
+echo $agg;
+bpay=$(cat data.csv | awk '{sum+=$4} END {print sum/NR}');
+echo $bpay;
+
+overt=$(cat data.csv | awk '{print $5 }' );
+echo $overt;
+sev=7000;
+tenn=10000;
+count=0;
+if ((count!= 0))
+then
+	if (( $sev -gt $overt )) 
+	then
+		if (( $overt -lt $tenn ))
+        	then
+ 		ovtm=$(cat data.csv | awk '{print $3}');
+        	echo $ovtm;
+        	echo $overt;
+        	fi
+	
+	fi
+	count++;
+ fi

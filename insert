@@ -1,0 +1,15 @@
+for inser in *.txt
+do
+	fName=`echo $inser | awk -F. '{print $1}'`;
+	echo $inser;
+	echo $fName;
+	printf "\n";
+	if [ -d $fName ]
+	then
+		rm -r $fName;
+	
+	fi
+		mkdir $fName;
+			
+		mv $inser $fName;
+	done
